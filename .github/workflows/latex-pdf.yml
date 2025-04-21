@@ -60,12 +60,10 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: Update PDF and index.html on gh-pages
+      - name: Update index.html on gh-pages
         run: |
           VERSION=$(date -u +%Y%m%d%H%M)
           echo "Using version: $VERSION"
-      
-          cp ../output/LubianaPiosenki.pdf ./LubianaPiosenki.pdf
       
           sed -i "s|v=[0-9]\+|v=${VERSION}|g" index.html
       
