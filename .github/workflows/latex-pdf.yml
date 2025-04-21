@@ -44,3 +44,18 @@ jobs:
           else
             echo "PDF has not changed. Skipping commit."
           fi
+
+      - name: Copy PDF to publish folder
+        if: success()
+        run: |
+          mkdir -p public
+          cp output/LubianaPiosenki.pdf public/
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+
