@@ -5,11 +5,12 @@
 
 <p align="center">
   <a href="https://ghrik.github.io/SpiewnikLubiana/index.html" target="_blank">
-    <img src="https://img.shields.io/badge/DO%20%C5%9APIEWNIKA-PDF-red?style=for-the-badge" alt="Do śpiewnika">
+    <img src="https://img.shields.io/badge/DO%20%C5%9APIEWNIKA-PDF-red?style=for-the-badge"
+         alt="Do śpiewnika"
+         width="300"
+         height="90">
   </a>
 </p>
-
-
 
 
 ## About this project
