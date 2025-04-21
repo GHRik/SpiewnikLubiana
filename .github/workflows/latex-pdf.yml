@@ -24,7 +24,11 @@ jobs:
             texlive-latex-extra \
             texlive-lang-polish \
             latexmk
-
+            
+      - name: Generate LaTeX macro with current date
+        run: |
+          echo "\\newcommand{\\LastUpdateDate}{$(date -u +'%Y-%m-%d %H:%M UTC')}" > LastUpdateDate.tex
+        
       - name: Compile PDF
         run: |
           mkdir -p output
@@ -50,6 +54,7 @@ jobs:
         run: |
           mkdir -p public
           cp output/LubianaPiosenki.pdf public/
+          
 
       - name: Deploy to GitHub Pages
         if: success()
