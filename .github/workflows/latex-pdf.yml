@@ -58,8 +58,8 @@ jobs:
       - name: Update version in index.html
         run: |
           VERSION=$(date -u +%Y%m%d%H%M)
-          sed -i "s|\(LubianaPiosenki\.pdf\?\)v=[0-9]\+|\1v=${VERSION}|g" public/index.html  
-
+          sed -i "s|\(LubianaPiosenki\.pdf\?\)v=[0-9]\+|\1v=${VERSION}|g" index.html  
+          
       - name: Deploy to GitHub Pages
         if: success()
         uses: peaceiris/actions-gh-pages@v3
