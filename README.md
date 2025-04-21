@@ -1,5 +1,5 @@
 # SpiewnikLubiana
-[![Build PDF](https://github.com/GHRik/SpiewnikLubiana/actions/workflows/latex-build.yml/badge.svg)](https://github.com/GHRik/SpiewnikLubiana/actions)
+[![Build PDF](https://github.com/GHRik/SpiewnikLubiana/actions/workflows/latex-pdf.yml/badge.svg)](https://github.com/GHRik/SpiewnikLubiana/actions)
 ![Last Commit](https://img.shields.io/github/last-commit/GHRik/SpiewnikLubiana)
 
 
