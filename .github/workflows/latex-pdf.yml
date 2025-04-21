@@ -55,6 +55,10 @@ jobs:
           mkdir -p public
           cp output/LubianaPiosenki.pdf public/
           
+      - name: Update version in index.html
+        run: |
+          VERSION=$(date -u +%Y%m%d%H%M)
+          sed -i "s|\(LubianaPiosenki\.pdf\?\)v=[0-9]\+|\1v=${VERSION}|g" public/index.html  
 
       - name: Deploy to GitHub Pages
         if: success()
@@ -63,4 +67,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+
+
 
