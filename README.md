@@ -4,10 +4,22 @@
 
 
 <p align="center">
-  <a href="https://ghrik.github.io/SpiewnikLubiana/LubianaPiosenki.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Do%20%C5%9Bpiewnika-pdf-blue?style=for-the-badge" alt="Do śpiewnika">
+  <a href="https://ghrik.github.io/SpiewnikLubiana/LubianaPiosenki.pdf" target="_blank" style="text-decoration: none;">
+    <span style="
+      display: inline-block;
+      background-color: #007acc;
+      color: white;
+      padding: 18px 36px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      font-family: sans-serif;
+    ">
+      Do śpiewnika (PDF)
+    </span>
   </a>
 </p>
+
 
 
 ## About this project
