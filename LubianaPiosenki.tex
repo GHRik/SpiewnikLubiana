@@ -32,6 +32,11 @@
   \addcontentsline{toc}{subsection}{#1}%
   \subsection*{#2}%
 }
+\newcommand{\piosenkaSub}[2]{%
+  \phantomsection
+  \addcontentsline{toc}{subsubsection}{#1}%
+  \subsubsection*{#2}%
+}
 
 \begin{center}
 
@@ -670,9 +675,6 @@ Tak zakochać, zakochać się można tylko raz
 \end{verbatim}
 \clearpage
 
-%\section*{\myformat{{\fontsize{30}{38}\selectfont Disney}}}\hspace*{6pt} 
-%\addcontentsline{toc}{section}{Disney}
-
 \piosenka{Disney - Jestem kimś (Planeta Skarbów)}{Jestem kimś (Planeta Skarbów)}
 \begin{verbatim}
 Świat jest zagadką tak jak ja
@@ -774,9 +776,6 @@ Z ciebie nic nie da się, zrobić tu!
 Ref. : (Silny bądź!)... x2
 \end{verbatim}
 \clearpage
-
-%\section*{\myformat{{\fontsize{30}{38}\selectfont Dżem}}}\hspace*{6pt} 
-%\addcontentsline{toc}{section}{Dżem}
 
 \piosenka{Dżem - Wehikuł czasu}{Wehikuł czasu}
 \begin{verbatim}
@@ -1007,9 +1006,6 @@ Nie ma już nic, nic, nic, nic.
 \end{verbatim}
 \clearpage
 
-%\section*{\myformat{{\fontsize{30}{38}\selectfont Golec uorkiestra }}}\hspace*{6pt} 
-%\addcontentsline{toc}{section}{Golec uorkiestra }
-
 \piosenka{Golec uorkiestra - Crazy is my life}{Crazy is my life}
 \begin{verbatim}
 Crazy, crazy, crazy is my life!
@@ -1226,9 +1222,6 @@ A tam, gdzie to kretowisko
 Będzie stał mój bank (x4)
 \end{verbatim}
 \clearpage
-
-%\section*{\myformat{{\fontsize{30}{38}\selectfont Ich Troje}}}\hspace*{6pt} 
-%\addcontentsline{toc}{section}{Ich Troje}
 
 \piosenka{Ich Troje - A wszystko to, bo Ciebie kocham}{A wszystko to, bo Ciebie kocham}
 \begin{verbatim}
@@ -3038,9 +3031,7 @@ Agnieszka już dawno tutaj nie mieszka
 \clearpage
 
 \piosenka{Wojtek Szumański - Ballada o cyckach}{Ballada o cyckach}
-
-\subsubsection*{\myformat{Część I}}
-\addcontentsline{toc}{subsubsection}{Część I}
+\piosenkaSub{Część I}{Część I}
 \begin{verbatim}
 Jeden chciałby być żołnierzem,
 Drugi chciałby być papieżem,
@@ -3084,8 +3075,7 @@ Macać cycki aż po grób!
 \end{verbatim}
 \clearpage
 
-\subsubsection*{\myformat{Część II}}
-\addcontentsline{toc}{subsubsection}{Część II}
+\piosenkaSub{Część II}{Część II}
 \begin{verbatim}
 Widzisz tak to bywa w świecie,
 Że choć ciężko jest kobiecie,
@@ -3129,8 +3119,7 @@ Cycki cycki ponad wszystko!!!
 \end{verbatim}
 \clearpage
 
-\subsubsection*{\myformat{Świąteczna}}
-\addcontentsline{toc}{subsubsection}{Świąteczna}
+\piosenkaSub{Świąteczna}{Świąteczna}
 \begin{verbatim}
 Jeden chciałby klocki LEGO,
 Drugi woli coś innego,
