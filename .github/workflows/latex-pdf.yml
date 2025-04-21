@@ -27,7 +27,7 @@ jobs:
             
       - name: Generate LaTeX macro with current date
         run: |
-          echo "\\newcommand{\\LastUpdateDate}{$(date -u +'%Y-%m-%d %H:%M UTC')}" > LastUpdateDate.tex
+          echo "\\renewcommand{\\LastUpdateDate}{$(date -u +'%Y-%m-%d %H:%M UTC')}" > LastUpdateDate.tex
         
       - name: Compile PDF
         run: |
