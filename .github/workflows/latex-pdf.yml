@@ -54,6 +54,27 @@ jobs:
         run: |
           mkdir -p public
           cp output/LubianaPiosenki.pdf public/
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Update PDF and index.html on gh-pages
+        run: |
+          VERSION=$(date -u +%Y%m%d%H%M)
+          echo "Using version: $VERSION"
+      
+          cp ../output/LubianaPiosenki.pdf ./LubianaPiosenki.pdf
+      
+          sed -i "s|v=[0-9]\+|v=${VERSION}|g" index.html
+      
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add LubianaPiosenki.pdf index.html
+          git commit -m "Update PDF and index.html to version v${VERSION}" || echo "Nothing to commit"
+          git push
+
           
       - name: Update version in index.html
         run: |
