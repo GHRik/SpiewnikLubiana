@@ -16,6 +16,7 @@
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage[T1]{fontenc}
+\input{LastUpdateDate.tex}
 
 
 \hypersetup{
@@ -37,6 +38,12 @@
   \addcontentsline{toc}{subsubsection}{#1}%
   \subsubsection*{#2}%
 }
+
+\newcommand{\LastUpdateDate}{NIEZNANA}
+
+\begin{flushright}
+\textit{Wersja z dnia: \LastUpdateDate}
+\end{flushright}
 
 \begin{center}
 
