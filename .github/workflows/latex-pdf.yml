@@ -1,4 +1,4 @@
-name: Compile LaTeX PDF
+name: Build and Commit LaTeX PDF
 
 on:
   push:
@@ -21,13 +21,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-full
 
-      - name: Compile LaTeX to PDF
+      - name: Compile PDF
         run: |
           mkdir -p output
           latexmk -pdf -interaction=nonstopmode -halt-on-error -output-directory=output LubianaPiosenki.tex
 
-      - name: Commit and push generated PDF (if changed)
-        if: success()
+      - name: Commit generated PDF if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -36,15 +35,8 @@ jobs:
 
           if ! git diff --cached --quiet; then
             timestamp=$(date -u +"%Y-%m-%d %H:%M UTC")
-            git commit -m "Automatically generated PDF from LubianaPiosenki.tex (${timestamp})"
+            git commit -m "Auto-generated PDF from LubianaPiosenki.tex ($timestamp)"
             git push
           else
-            echo "PDF has not changed — skipping commit."
+            echo "PDF has not changed. Skipping commit."
           fi
-
-      - name: Upload PDF artifact
-        if: success()
-        uses: actions/upload-artifact@3f92c8182796c1518c8c290d4b18c0c6e3c91e44
-        with:
-          name: LubianaPiosenki
-          path: output/LubianaPiosenki.pdf
