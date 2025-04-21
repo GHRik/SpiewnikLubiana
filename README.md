@@ -3,11 +3,12 @@
 ![Last Commit](https://img.shields.io/github/last-commit/GHRik/SpiewnikLubiana)
 
 
-<h2 align="center">
-  <a href="https://ghrik.github.io/SpiewnikLubiana/LubianaPiosenki.pdf" style="text-decoration:none;">
-    <strong>📄 Do śpiewnika</strong>
+<p align="center">
+  <a href="https://ghrik.github.io/SpiewnikLubiana/LubianaPiosenki.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Do%20%C5%9Bpiewnika-pdf-blue?style=for-the-badge" alt="Do śpiewnika">
   </a>
-</h2>
+</p>
+
 
 ## About this project
 
