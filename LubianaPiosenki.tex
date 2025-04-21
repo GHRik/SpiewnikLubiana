@@ -27,7 +27,11 @@
 }
 
 \begin{document}
-\def\myformat#1{\centering#1}
+\newcommand{\piosenka}[2]{%
+  \phantomsection
+  \addcontentsline{toc}{subsection}{#1}%
+  \subsection*{#2}%
+}
 
 \begin{center}
 
@@ -47,9 +51,10 @@
 \clearpage
 \end{center}
 
-\titleformat{\subsection}
-  {\centering\fontsize{24}{0}\selectfont\bfseries} % <-- tu rozmiar i styl
-  {\thesubsection}{1em}{}    
+\titleformat{\subsection}[block]
+  {\centering\fontsize{20}{24}\selectfont\bfseries}
+  {}{0pt}{}
+
 \titlespacing*{\subsection}
   {0pt}   % odstęp z lewej (zerowy, bo centrowany)
   {0ex}   % odstęp *nad* (możesz zmienić)
@@ -59,8 +64,7 @@
 \tableofcontents
 \clearpage
 
-\subsection*{\myformat{Dres}}
-\addcontentsline{toc}{subsection}{Big Cyc - Dres}
+\piosenka{Big Cyc - Dres}{Dres}
 \begin{verbatim}
 Dresy moje ukochane
 Ja zakładam Was nad ranem
@@ -121,7 +125,8 @@ Dres modny jest! x2
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Facet to świnia}}
+\phantomsection
+\subsection*{Facet to świnia}
 \addcontentsline{toc}{subsection}{Big Cyc - Facet to świnia}
 \begin{verbatim}
 Jak zwykle znów nie robisz nic
@@ -168,8 +173,7 @@ Ref (x3): Facet to świnia...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Makumba}}
-\addcontentsline{toc}{subsection}{Big Cyc - Makumba}
+\piosenka{Big Cyc - Makumba}{Makumba}
 \begin{verbatim}
 Mój ojciec - Makumba - być królem wioski
 Ja mieszkać w Afryka, przyjechać do Polski
@@ -218,8 +222,7 @@ REF. Makumba, Makumba, Makumba ska...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Rudy się żeni}}
-\addcontentsline{toc}{subsection}{Big Cyc - Rudy się żeni}
+\piosenka{Big Cyc - Rudy się żeni}{Rudy się żeni}
 \begin{verbatim}
 Dziś zadzwonił do mnie kumpel i melduje, że Rudy się żeni.
 Chociaż ja nie znam kobiety, która chciałaby z nim być.
@@ -247,8 +250,7 @@ Rudy, Rudy się żeni...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Czerwone korale}}
-\addcontentsline{toc}{subsection}{Brathanki - Czerwone korale}
+\piosenka{Brathanki - Czerwone korale}{Czerwone korale}
 \begin{verbatim}
 Czerwone korale, czerwone niczym wino
 Korale z polnej jarzębiny
@@ -291,8 +293,7 @@ Na na na na na na na naj naj naj
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{W kinie, w Lublinie}}
-\addcontentsline{toc}{subsection}{Brathanki - W kinie, w Lublinie}
+\piosenka{Brathanki - W kinie, w Lublinie}{W kinie, w Lublinie}
 \begin{verbatim}
 O świcie i o zmroku
 O świcie i o zmroku
@@ -362,8 +363,7 @@ Czy miasto czy wiocha, ty mnie z całej siły kochaj!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Bal wszystkich świętych}}
-\addcontentsline{toc}{subsection}{Budka suflera - Bal wszystkich świętych}
+\piosenka{Budka suflera - Bal wszystkich świętych}{Bal wszystkich świętych}
 \begin{verbatim}
 Ta niedziela jest jak film, tani klasy "B",
 Facet się pałęta w nim w nieciekawym tle,
@@ -410,8 +410,7 @@ W niebie dzisiaj wszyscy, wszyscy świeci mają bal.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Jolka, Jolka}}
-\addcontentsline{toc}{subsection}{Budka suflera - Jolka, Jolka}
+\piosenka{Budka suflera - Jolka, Jolka}{Jolka, Jolka}
 \begin{verbatim}
 Jolka, Jolka, pamiętasz lato ze snu,
 Gdy pisałaś: "tak mi źle,
@@ -460,8 +459,7 @@ Ale nic nie jest proste w te dni.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Takie tango}}
-\addcontentsline{toc}{subsection}{Budka suflera - Takie tango}
+\piosenka{Budka suflera - Takie tango}{Takie tango}
 \begin{verbatim}
 Na sali wielkiej i błyszczącej
 Tak jak nocne Buenos Aires
@@ -508,8 +506,7 @@ Tak ten świat złożony jest /x4
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Jej czarne oczy}}
-\addcontentsline{toc}{subsection}{Ivan i Delfin - Jej czarne oczy}
+\piosenka{Ivan i Delfin - Jej czarne oczy}{Jej czarne oczy}
 \begin{verbatim}
 Złe kilometry dzielą nas
 Lato umiera jesieni czas
@@ -555,8 +552,7 @@ Jej piękne czarne oczy... (2x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Miłość w Zakopanem}}
-\addcontentsline{toc}{subsection}{Zenek Martyniuk - Miłość w Zakopanem}
+\piosenka{Zenek Martyniuk - Miłość w Zakopanem}{Miłość w Zakopanem}
 \begin{verbatim}
 Teraz już wszystko wiem
 Bawiłem grubo się i w Ameryce, (USA)
@@ -606,8 +602,7 @@ Miłość, Miłość w Zakopanem... (2x)
 \clearpage
 
 
-\subsection*{\myformat{Miód malina}}
-\addcontentsline{toc}{subsection}{Mig - Miód malina}
+\piosenka{Mig - Miód malina}{Miód malina}
 \begin{verbatim}
 1. Uderzam na imprezę, bo tam nie będę sam.
 Zawieszam nagle oko, na widok jednej z dam.
@@ -640,8 +635,7 @@ Nie mogę się powstrzymać - miód malina! / x2
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Przez Twe oczy zielone}}
-\addcontentsline{toc}{subsection}{Akcent - Przez Twe oczy zielone}
+\piosenka{Akcent - Przez Twe oczy zielone}{Przez Twe oczy zielone}
 \begin{verbatim}
 Odkąd zobaczyłem ciebie
 Nie mogę jeść, nie mogę spać
@@ -679,8 +673,7 @@ Tak zakochać, zakochać się można tylko raz
 %\section*{\myformat{{\fontsize{30}{38}\selectfont Disney}}}\hspace*{6pt} 
 %\addcontentsline{toc}{section}{Disney}
 
-\subsection*{\myformat{Jestem kimś (Planeta Skarbów)}}
-\addcontentsline{toc}{subsection}{Disney - Jestem kimś (Planeta Skarbów)}
+\piosenka{Disney - Jestem kimś (Planeta Skarbów)}{Jestem kimś (Planeta Skarbów)}
 \begin{verbatim}
 Świat jest zagadką tak jak ja
 Każda chwila jest jak skarb
@@ -731,8 +724,7 @@ Jestem kimś
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Zrobię mężczyzn z was (Mulan)}}
-\addcontentsline{toc}{subsection}{Disney - Zrobię mężczyzn z was (Mulan)}
+\piosenka{Disney - Zrobię mężczyzn z was (Mulan)}{Zrobię mężczyzn z was (Mulan)}
 \begin{verbatim}
 To jeszcze daleka droga przed nami
 1.
@@ -786,8 +778,7 @@ Ref. : (Silny bądź!)... x2
 %\section*{\myformat{{\fontsize{30}{38}\selectfont Dżem}}}\hspace*{6pt} 
 %\addcontentsline{toc}{section}{Dżem}
 
-\subsection*{\myformat{Wehikuł czasu}}
-\addcontentsline{toc}{subsection}{Dżem - Wehikuł czasu}
+\piosenka{Dżem - Wehikuł czasu}{Wehikuł czasu}
 \begin{verbatim}
 Pamiętam dobrze ideał swój.
 Marzeniami żyłem jak król.
@@ -832,8 +823,7 @@ Nie powrócą już! Nie!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Co ty tutaj robisz}}
-\addcontentsline{toc}{subsection}{Elektryczne gitary - Co ty tutaj robisz}
+\piosenka{Elektryczne gitary - Co ty tutaj robisz}{Co ty tutaj robisz}
 \begin{verbatim}
 I co ja robię tu (u-u, co ty tutaj robisz)
 Dwanaście ciężkich szczerozłotych koron moją głowę zdobi
@@ -881,8 +871,7 @@ I co ja robię tu /co ty tutaj robisz (X4)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Jestem z miasta}}
-\addcontentsline{toc}{subsection}{Elektryczne gitary - Jestem z miasta}
+\piosenka{Elektryczne gitary - Jestem z miasta}{Jestem z miasta}
 \begin{verbatim}
 Jestem z miasta, to widać
 Jestem z miasta, to słychać
@@ -911,8 +900,7 @@ Ref. Jestem z miasta...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Kiler}}
-\addcontentsline{toc}{subsection}{Elektryczne gitary - Kiler}
+\piosenka{Elektryczne gitary - Kiler}{Kiler}
 \begin{verbatim}
 To co się dzieje naprawdę nie istnieje
 Więc nie warto mieć niczego, tylko karmić zmysły
@@ -948,8 +936,7 @@ Już tylko Kiler...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ona jest pedałem}}
-\addcontentsline{toc}{subsection}{Elektryczne gitary - Ona jest pedałem}
+\piosenka{Elektryczne gitary - Ona jest pedałem}{Ona jest pedałem}
 \begin{verbatim}
 ref. Ona jest pedałem,
 właśnie się dowiedziałem,
@@ -986,8 +973,7 @@ a potem pojechałem.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{To już jest koniec}}
-\addcontentsline{toc}{subsection}{Elektryczne gitary - To już jest koniec}
+\piosenka{Elektryczne gitary - To już jest koniec}{To już jest koniec}
 \begin{verbatim}
 Ref.
 To już jest koniec, nie ma już nic,
@@ -1024,8 +1010,7 @@ Nie ma już nic, nic, nic, nic.
 %\section*{\myformat{{\fontsize{30}{38}\selectfont Golec uorkiestra }}}\hspace*{6pt} 
 %\addcontentsline{toc}{section}{Golec uorkiestra }
 
-\subsection*{\myformat{Crazy is my life}}
-\addcontentsline{toc}{subsection}{Golec uorkiestra - Crazy is my life}
+\piosenka{Golec uorkiestra - Crazy is my life}{Crazy is my life}
 \begin{verbatim}
 Crazy, crazy, crazy is my life!
 
@@ -1052,8 +1037,7 @@ Crazy, crazy, crazy is my life
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Lornetka}}
-\addcontentsline{toc}{subsection}{Golec uorkiestra - Lornetka}
+\piosenka{Golec uorkiestra - Lornetka}{Lornetka}
 \begin{verbatim}
 Kupiłem lornetkę, by podglądać Bernadetkę
 Ale w łoknach żaluzje mo zasłonięte!
@@ -1090,8 +1074,7 @@ Jo nie śpię, kombinując jak być z nią (x2)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Pędzą konie}}
-\addcontentsline{toc}{subsection}{Golec uorkiestra - Pędzą konie}
+\piosenka{Golec uorkiestra - Pędzą konie}{Pędzą konie}
 \begin{verbatim}
 Tam, gdzie wielka niewiadoma
 Tam, skąd płyną do nas dni
@@ -1140,8 +1123,7 @@ Kocham Cię!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Słodycze}}
-\addcontentsline{toc}{subsection}{Golec uorkiestra - Słodycze}
+\piosenka{Golec uorkiestra - Słodycze}{Słodycze}
 \begin{verbatim}
 Udzielił mi kiedyś mój dziadek
 Porady cenniejszej niż spadek
@@ -1213,8 +1195,7 @@ Tylko, tylko chces!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ściernisko}}
-\addcontentsline{toc}{subsection}{Golec uorkiestra - Ściernisko}
+\piosenka{Golec uorkiestra - Ściernisko}{Ściernisko}
 \begin{verbatim}
 Pole, pole, łyse pole, ale mam już plan
 Pomalutku, bez pośpiechu, wszystko zrobię sam
@@ -1249,8 +1230,7 @@ Będzie stał mój bank (x4)
 %\section*{\myformat{{\fontsize{30}{38}\selectfont Ich Troje}}}\hspace*{6pt} 
 %\addcontentsline{toc}{section}{Ich Troje}
 
-\subsection*{\myformat{A wszystko to, bo Ciebie kocham}}
-\addcontentsline{toc}{subsection}{Ich Troje - A wszystko to, bo Ciebie kocham}
+\piosenka{Ich Troje - A wszystko to, bo Ciebie kocham}{A wszystko to, bo Ciebie kocham}
 \begin{verbatim}
 Czy wiesz malutka może, jak Ciebie mi brak?
 Czy czujesz to, co ja, gdy jestem sam?
@@ -1302,8 +1282,7 @@ Dla ciebie zabiję się.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Babski świat}}
-\addcontentsline{toc}{subsection}{Ich Troje - Babski świat}
+\piosenka{Ich Troje - Babski świat}{Babski świat}
 \begin{verbatim}
 Czy przypominasz sobie stary przyjacielu?
 Jak powiedziałeś że, z tą tu już aż po grób.
@@ -1355,8 +1334,7 @@ Pijmy do dna! Pijmy do dna! Pijmy do dna!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Powiedz}}
-\addcontentsline{toc}{subsection}{Ich Troje - Powiedz}
+\piosenka{Ich Troje - Powiedz}{Powiedz}
 \begin{verbatim}
 Powiedz, powiedz czemu
 Świat twój milczy cały blady od wzruszeń
@@ -1398,8 +1376,7 @@ Moich łez wylanych - łez...
 \clearpage
 
 
-\subsection*{\myformat{Zawsze z tobą chciałbym być}}
-\addcontentsline{toc}{subsection}{Ich Troje - Zawsze z tobą chciałbym być}
+\piosenka{Ich Troje - Zawsze z tobą chciałbym być}{Zawsze z tobą chciałbym być}
 \begin{verbatim}
 Zadzwoniłem w środku lata,
 Choć minęły już dwa lata
@@ -1444,8 +1421,7 @@ Zawsze z tobą chciałbym być... (4x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Pokolenie}}
-\addcontentsline{toc}{subsection}{Kombi - Pokolenie}
+\piosenka{Kombi - Pokolenie}{Pokolenie}
 \begin{verbatim}
 Rodzisz się-to znak.
 Kocha cię ten świat.
@@ -1508,8 +1484,7 @@ Nasze nie...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Chciałem być}}
-\addcontentsline{toc}{subsection}{Krawczyk - Chciałem być}
+\piosenka{Krawczyk - Chciałem być}{Chciałem być}
 \begin{verbatim}
 Chciałem być marynarzem
 chciałem mieć tatuaże
@@ -1542,8 +1517,7 @@ przemierzyłem cały świat. . . itd.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Mój przyjacielu}}
-\addcontentsline{toc}{subsection}{Krawczyk - Mój przyjacielu}
+\piosenka{Krawczyk - Mój przyjacielu}{Mój przyjacielu}
 \begin{verbatim}
 Mój przyjacielu, byłeś mi naprawdę bliski,
 Mój przyjacielu, wiesz, że byłeś mi, jak brat
@@ -1594,8 +1568,7 @@ Dał gitarę, dał samochód - żony nie dał, ju!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{My cyganie}}
-\addcontentsline{toc}{subsection}{Krawczyk - My cyganie}
+\piosenka{Krawczyk - My cyganie}{My cyganie}
 \begin{verbatim}
 My Cyganie co pędzimy z wiatrem,
 my Cyganie znamy cały świat!
@@ -1636,8 +1609,7 @@ Ref.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ostatni raz zatańczysz ze mną}}
-\addcontentsline{toc}{subsection}{Krawczyk - Ostatni raz zatańczysz ze mną}
+\piosenka{Krawczyk - Ostatni raz zatańczysz ze mną}{Ostatni raz zatańczysz ze mną}
 \begin{verbatim}
 Kto zapomni - ty czy ja,
 Komu będzie kiedyś żal?
@@ -1673,8 +1645,7 @@ Jak niepotrzebna łza.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Parostatek}}
-\addcontentsline{toc}{subsection}{Krawczyk - Parostatek}
+\piosenka{Krawczyk - Parostatek}{Parostatek}
 \begin{verbatim}
 W starym albumie u mego dziadka
 Jest takie zdjęcie, istny cud
@@ -1719,8 +1690,7 @@ La la la la la la la...etc.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Kryzysowa narzeczona}}
-\addcontentsline{toc}{subsection}{Lady Pank - Kryzysowa narzeczona}
+\piosenka{Lady Pank - Kryzysowa narzeczona}{Kryzysowa narzeczona}
 \begin{verbatim}
 Mogłaś moją być
 Kryzysową narzeczoną
@@ -1770,8 +1740,7 @@ Nigdy... Nigdy nie dowiesz się
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Mniej niż zero}}
-\addcontentsline{toc}{subsection}{Lady Pank - Mniej niż zero}
+\piosenka{Lady Pank - Mniej niż zero}{Mniej niż zero}
 \begin{verbatim}
 Oooo, oooo, oooo oooo
 Myślisz może, że więcej coś znaczysz
@@ -1815,8 +1784,7 @@ Oooo oooo oooo oooo
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Na co komu dziś}}
-\addcontentsline{toc}{subsection}{Lady Pank - Na co komu dziś}
+\piosenka{Lady Pank - Na co komu dziś}{Na co komu dziś}
 \begin{verbatim}
 Stała pod ścianą sącząc kakao
 Kapela cięła walca na sześć
@@ -1860,8 +1828,7 @@ Kiedy czujesz, że uleciał gaz
 \clearpage
 
 
-\subsection*{\myformat{Stacja Warszawa}}
-\addcontentsline{toc}{subsection}{Lady Pank - Stacja Warszawa}
+\piosenka{Lady Pank - Stacja Warszawa}{Stacja Warszawa}
 \begin{multicols}{2}
 \begin{verbatim}
 W moich snach wciąż Warszawa
@@ -1934,8 +1901,7 @@ dobrze to wiem! x2
 \clearpage
 
 
-\subsection*{\myformat{Zawsze Tam Gdzie Ty}}
-\addcontentsline{toc}{subsection}{Lady Pank - Zawsze Tam Gdzie Ty}
+\piosenka{Lady Pank - Zawsze Tam Gdzie Ty}{Zawsze Tam Gdzie Ty}
 \begin{verbatim}
 Zamienię każdy oddech w niespokojny wiatr
 By zabrał mnie z powrotem - tam, gdzie masz swój świat
@@ -1976,8 +1942,7 @@ Zawsze tam gdzie Ty
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Znowu pada deszcz}}
-\addcontentsline{toc}{subsection}{Lady Pank - Znowu pada deszcz}
+\piosenka{Lady Pank - Znowu pada deszcz}{Znowu pada deszcz}
 \begin{verbatim}
 Pada deszcz - tak już było wczoraj
 "Znowu Ty" - to są twoje słowa
@@ -2026,8 +1991,7 @@ Dzisiaj znowu pada deszcz
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Przeżyj to sam}}
-\addcontentsline{toc}{subsection}{Lombard - Przeżyj to sam}
+\piosenka{Lombard - Przeżyj to sam}{Przeżyj to sam}
 \begin{verbatim}
 Na życie patrzysz bez emocji
 Na przekór czasom i ludziom wbrew
@@ -2059,8 +2023,7 @@ Póki jeszcze serce masz (x3)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Autobiografia}}
-\addcontentsline{toc}{subsection}{Perfect - Autobiografia}
+\piosenka{Perfect - Autobiografia}{Autobiografia}
 \begin{verbatim}
 Miałem dziesięć lat
 Gdy usłyszał o nim świat
@@ -2142,8 +2105,7 @@ Do czterech ścian
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Nie płacz Ewka}}
-\addcontentsline{toc}{subsection}{Perfect - Nie płacz Ewka}
+\piosenka{Perfect - Nie płacz Ewka}{Nie płacz Ewka}
 \begin{verbatim}
 Nie płacz, Ewka, bo tu miejsca brak na twe babskie łzy
 Po ulicy miłość hula wiatr wśród rozbitych szyb
@@ -2171,8 +2133,7 @@ Jeszcze raz żegnam was, nie spotkamy się (x2)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Byłaś dla mnie wszystkim}}
-\addcontentsline{toc}{subsection}{Poparzeni Kawą Trzy - Byłaś dla mnie wszystkim}
+\piosenka{Poparzeni Kawą Trzy - Byłaś dla mnie wszystkim}{Byłaś dla mnie wszystkim}
 \begin{verbatim}
 Lekarstwem na zgagę,
 Promocją w spożywczym,
@@ -2218,8 +2179,7 @@ wszystko jest już niczym.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Okrutna, zła i podła}}
-\addcontentsline{toc}{subsection}{Poparzeni Kawą Trzy - Okrutna, zła i podła}
+\piosenka{Poparzeni Kawą Trzy - Okrutna, zła i podła}{Okrutna, zła i podła}
 \begin{verbatim}
 Wróciłem wcześniej niż zwykle
 Dobrze, że miałem klucz
@@ -2271,8 +2231,7 @@ Kolejną równie głupią
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Czarny chleb i czarna kawa}}
-\addcontentsline{toc}{subsection}{Strachy na lachy - Czarny chleb i czarna kawa}
+\piosenka{Strachy na lachy - Czarny chleb i czarna kawa}{Czarny chleb i czarna kawa}
 \begin{verbatim}
 Jedzie pociąg, złe wagony,
 Do więzienia wiozą mnie.
@@ -2321,8 +2280,7 @@ Które zwie się wolnością... (2x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Piła tango}}
-\addcontentsline{toc}{subsection}{Strachy na lachy - Piła tango}
+\piosenka{Strachy na lachy - Piła tango}{Piła tango}
 \begin{verbatim}
 Oto historia z kantem,
 Co podwójne ma dno.
@@ -2411,8 +2369,7 @@ To nie tak by to szło...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Bitwa}}
-\addcontentsline{toc}{subsection}{Szanty - Bitwa}
+\piosenka{Szanty - Bitwa}{Bitwa}
 \begin{verbatim}
 Okręt nasz wpłynął w mgłę i fregaty dwie
 Popłynęły naszym kursem by nie zgubić się.
@@ -2458,8 +2415,7 @@ Jak da Bóg, ocalimy
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Gdzie ta keja}}
-\addcontentsline{toc}{subsection}{Szanty - Gdzie ta keja}
+\piosenka{Szanty - Gdzie ta keja}{Gdzie ta keja}
 \begin{verbatim}
 Gdyby tak ktoś przyszedł i powiedział:
 - Stary, czy masz czas?
@@ -2494,8 +2450,7 @@ Gdzie ta keja, a przy niej ten jacht...
 \clearpage
 
 
-\subsection*{\myformat{Hiszpańskie Dziewczyny}}
-\addcontentsline{toc}{subsection}{Szanty - Hiszpańskie Dziewczyny}
+\piosenka{Szanty - Hiszpańskie Dziewczyny}{Hiszpańskie Dziewczyny}
 \begin{verbatim}
 Żegnajcie nam dziś, hiszpańskie dziewczyny,
 Żegnajcie nam dziś, marzenia ze snów,
@@ -2530,8 +2485,7 @@ I smak waszych ust, hiszpańskie dziewczyny ...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Kubański szlak}}
-\addcontentsline{toc}{subsection}{Szanty - Kubański szlak}
+\piosenka{Szanty - Kubański szlak}{Kubański szlak}
 \begin{verbatim}
 Przeklęty niech będzie ten kubański szlak
 -Bo szkorbut, bo szczury, bo smród
@@ -2583,8 +2537,7 @@ Resztę załatwi czas
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Morskie opowieści}}
-\addcontentsline{toc}{subsection}{Szanty - Morskie opowieści}
+\piosenka{Szanty - Morskie opowieści}{Morskie opowieści}
 \begin{verbatim}
 1. Kiedy rum zaszumi w głowie
 Cały świat nabiera treści
@@ -2631,8 +2584,7 @@ Morskim opowieściom
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Pieśń wielorybników}}
-\addcontentsline{toc}{subsection}{Szanty - Pieśń wielorybników}
+\piosenka{Szanty - Pieśń wielorybników}{Pieśń wielorybników}
 \begin{verbatim}
 Nasz diament prawie gotów już
 W cieśninach nie ma kry
@@ -2679,8 +2631,7 @@ REF: A więc krzycz o ho ho...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Przechyły}}
-\addcontentsline{toc}{subsection}{Szanty - Przechyły}
+\piosenka{Szanty - Przechyły}{Przechyły}
 \begin{verbatim}
 1. Pierwszy raz przy pełnym takielunku
 Biorę ster i trzymam kurs na wiatr
@@ -2728,8 +2679,7 @@ Ale wiatr, ósemka chyba dmie
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Cztery piwka na stół}}
-\addcontentsline{toc}{subsection}{Szanty - Cztery piwka na stół}
+\piosenka{Szanty - Cztery piwka na stół}{Cztery piwka na stół}
 \begin{verbatim}
 Ze Świnoujścia do Walvis Bay
 Droga nie była krótka
@@ -2794,8 +2744,7 @@ Tego szlema z nami wygrał czas
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Dżaga}}
-\addcontentsline{toc}{subsection}{Virgin - Dżaga}
+\piosenka{Virgin - Dżaga}{Dżaga}
 \begin{verbatim}
 Mówią mi jesteś kimś
 Możesz mieć każdego bo
@@ -2846,8 +2795,7 @@ I dlatego mam to gdzieś (2x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Baśka}}
-\addcontentsline{toc}{subsection}{Wilki - Baśka}
+\piosenka{Wilki - Baśka}{Baśka}
 \begin{verbatim}
 Baśka miała fajny biust,
 Ania – styl, a Zośka – coś, co lubię.
@@ -2883,8 +2831,7 @@ jak niebo nad nami. (x2)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Bohema}}
-\addcontentsline{toc}{subsection}{Wilki - Bohema}
+\piosenka{Wilki - Bohema}{Bohema}
 \begin{verbatim}
 Od tego trzeba zacząć rzecz
 Lecę, bo zgubiłem się
@@ -2922,8 +2869,7 @@ Kocham cię
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Na zawsze i na wieczność}}
-\addcontentsline{toc}{subsection}{Wilki - Na zawsze i na wieczność}
+\piosenka{Wilki - Na zawsze i na wieczność}{Na zawsze i na wieczność}
 \begin{verbatim}
 Był chyba maj, Park na Grochowie.
 W słoneczny dzień, zobaczyłem Cię.
@@ -2961,8 +2907,7 @@ odnaleźć Ciebie tu.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Nie stało się nic}}
-\addcontentsline{toc}{subsection}{Wilki - Nie stało się nic}
+\piosenka{Wilki - Nie stało się nic}{Nie stało się nic}
 \begin{verbatim}
 Jeden dzień jedna noc
 A w życiu jakby piękniej
@@ -3005,8 +2950,7 @@ Myślę że nie stało się nic (x5)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{A gdy jest już ciemno}}
-\addcontentsline{toc}{subsection}{Feel - A gdy jest już ciemno}
+\piosenka{Feel - A gdy jest już ciemno}{A gdy jest już ciemno}
 \begin{verbatim}
 Jest już ciemno, ale wszystko jedno.
 Pytam siebie, czym jest piękno
@@ -3043,8 +2987,7 @@ przy mnie bądź, a przy mnie bądź
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Agnieszka}}
-\addcontentsline{toc}{subsection}{Łzy - Agnieszka}
+\piosenka{Łzy - Agnieszka}{Agnieszka}
 \begin{verbatim}
 Było ciepłe lato, choć czasem padało
 Dużo wina się piło i mało się spało
@@ -3094,8 +3037,7 @@ Agnieszka już dawno tutaj nie mieszka
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ballada o cyckach}}
-\addcontentsline{toc}{subsection}{Wojtek Szumański - Ballada o cyckach}
+\piosenka{Wojtek Szumański - Ballada o cyckach}{Ballada o cyckach}
 
 \subsubsection*{\myformat{Część I}}
 \addcontentsline{toc}{subsubsection}{Część I}
@@ -3233,8 +3175,7 @@ Macać cycki cały czas!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Bella ciao}}
-\addcontentsline{toc}{subsection}{Dom z papieru - Bella ciao}
+\piosenka{Dom z papieru - Bella ciao}{Bella ciao}
 \begin{verbatim}
 Una mattina mi sono alzato
 O bella ciao, bella ciao, bella ciao, ciao, ciao
@@ -3271,8 +3212,7 @@ Morto per la libertà
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Biała armia}}
-\addcontentsline{toc}{subsection}{Bajm - Biała armia}
+\piosenka{Bajm - Biała armia}{Biała armia}
 \begin{verbatim}
 To Twoja flaga, nasz młody przyjacielu
 Nie musisz kochać jej barw, o nie
@@ -3308,8 +3248,7 @@ Twoja siła to skarb (6x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Biały miś}}
-\addcontentsline{toc}{subsection}{TOP ONE - Biały miś}
+\piosenka{TOP ONE - Biały miś}{Biały miś}
 \begin{verbatim}
 Hej dziewczyno, spójrz na misia,
 On przypomni przypomni chłopca ci
@@ -3353,8 +3292,7 @@ Który w oczach ma tylko szare łzy
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Chryzantemy złociste }}
-\addcontentsline{toc}{subsection}{Chryzantemy złociste }
+\piosenka{Chryzantemy złociste}{Chryzantemy złociste}
 \begin{verbatim}
 Zdradziłaś kurwo mnie
 Pod pociąg się podłożę
@@ -3403,8 +3341,7 @@ I nie podlewa ich kurwa nikt
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Deszcze niespokojne (czterej pancerni i pies)}}
-\addcontentsline{toc}{subsection}{Czterej pancerni i pies - Deszcze niespokojne}
+\piosenka{Czterej pancerni i pies - Deszcze niespokojne}{Deszcze niespokojne (czterej pancerni i pies)}
 \begin{verbatim}
 Deszcze niespokojne
 Potargały sad,
@@ -3432,8 +3369,7 @@ Po wiosenny bez.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Długość dźwięku samotności}}
-\addcontentsline{toc}{subsection}{Myslovitz - Długość dźwięku samotności}
+\piosenka{Myslovitz - Długość dźwięku samotności}{Długość dźwięku samotności}
 \begin{verbatim}
 I nawet kiedy będę sam,
 Nie zmienię się, to nie mój świat.
@@ -3482,8 +3418,7 @@ Którą ja wybrałem sam. [x2]
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Scenariusz Dla Moich Sąsiadów}}
-\addcontentsline{toc}{subsection}{Myslovitz - Scenariusz Dla Moich Sąsiadów}
+\piosenka{Myslovitz - Scenariusz Dla Moich Sąsiadów}{Scenariusz Dla Moich Sąsiadów}
 \begin{verbatim}
 Kiedy powrócisz już ja będę czekał
 Ulicą pójdę wzdłuż kupię gazetę
@@ -3512,8 +3447,7 @@ Będę leczył chore sąsiadów sny x2
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Dni, których nie znamy}}
-\addcontentsline{toc}{subsection}{Marek Grechuta - Dni, których nie znamy}
+\piosenka{Marek Grechuta - Dni, których nie znamy}{Dni, których nie znamy}
 \begin{verbatim}
 Tyle było dni, do utraty sił,
 Do utraty tchu, tyle było chwil,
@@ -3554,8 +3488,7 @@ Na na na na na na na na na...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Gdy nie ma w domu dzieci}}
-\addcontentsline{toc}{subsection}{Kult - Gdy nie ma w domu dzieci}
+\piosenka{Kult - Gdy nie ma w domu dzieci}{Gdy nie ma w domu dzieci}
 \begin{verbatim}
 Jedna flaszka, druga flaszka i też trzecia, kurde bele, leci
 Dom stoi zupełnie pusty nocą kurzą się dookoła rupiecie
@@ -3594,8 +3527,7 @@ Gdy nie ma w domu dzieci - to jesteśmy niegrzeczni.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Hej sokoły}}
-\addcontentsline{toc}{subsection}{Górale z pod Tarnowa - Hej sokoły}
+\piosenka{Górale z pod Tarnowa - Hej sokoły}{Hej sokoły}
 \begin{verbatim}
 Hej, tam gdzieś znad czarnej wody
 Siada na koń kozak młody,
@@ -3636,8 +3568,7 @@ Hej, hej…
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Kamień z napisem Love}}
-\addcontentsline{toc}{subsection}{Enej - Kamień z napisem Love}
+\piosenka{Enej - Kamień z napisem Love}{Kamień z napisem Love}
 \begin{verbatim}
 Dałem ci kamień z wielkim LOVE
 No, bo kwiaty szybko schną
@@ -3689,8 +3620,7 @@ Te kwiaty za złotych pięć (4x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{King bruce lee karate mistrz}}
-\addcontentsline{toc}{subsection}{Franek Kimono - King bruce lee karate mistrz}
+\piosenka{Franek Kimono - King bruce lee karate mistrz}{King bruce lee karate mistrz}
 \begin{verbatim}
 Nie rycz, mała, nie rycz
 Ja znam te wasze numery
@@ -3733,8 +3663,7 @@ Z napisem: "King Bruce Lee Karate Mistrz"
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Piosenka o komarze}}
-\addcontentsline{toc}{subsection}{Dominik - Piosenka o komarze}
+\piosenka{Dominik - Piosenka o komarze}{Piosenka o komarze}
 \begin{verbatim}
 Komar to jest zwierzę, kurwa jego mać,
 Jak cię nie ujebie, to nie może spać.
@@ -3773,8 +3702,7 @@ Wyżej nie poleci.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Lubię mówić z tobą}}
-\addcontentsline{toc}{subsection}{Akurat - Lubię mówić z tobą}
+\piosenka{Akurat - Lubię mówić z tobą}{Lubię mówić z tobą}
 \begin{verbatim}
 Kiedy z serca płyną słowa
 Uderzają z wielką mocą
@@ -3854,8 +3782,7 @@ I dlatego lubię mówić z Tobą.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Maczo}}
-\addcontentsline{toc}{subsection}{K.A.S.A. - Maczo}
+\piosenka{K.A.S.A. - Maczo}{Maczo}
 \begin{verbatim}
 Zobacz tu, zobacz mała jaki jestem cool, taki tłum ale widzę, że ty patrzysz tu
 bo ja mam to coś i tego dość dla ciebie też
@@ -3893,8 +3820,7 @@ Machos somos muchos machos
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Matura}}
-\addcontentsline{toc}{subsection}{Farben Lehre - Matura}
+\piosenka{Farben Lehre - Matura}{Matura}
 \begin{verbatim}
 Moja dziewczyna ma dzisiaj maturę.
 Nie ma czasu dla mnie w ogóle.
@@ -3933,8 +3859,7 @@ REF...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Moj jest ten kawalek podlogi}}
-\addcontentsline{toc}{subsection}{Mr Zoob - Moj jest ten kawalek podlogi}
+\piosenka{Mr Zoob - Moj jest ten kawalek podlogi}{Moj jest ten kawalek podlogi}
 \begin{verbatim}
 Znowu ktoś mnie podgląda,
 Lekko skrobie do drzwi.
@@ -3973,8 +3898,7 @@ Nie mówcie mi więc, co mam mówić!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Na jednej z dzikiej plaż}}
-\addcontentsline{toc}{subsection}{Rotary - Na jednej z dzikiej plaż}
+\piosenka{Rotary - Na jednej z dzikiej plaż}{Na jednej z dzikiej plaż}
 \begin{verbatim}
 Samochód w deszczu stał
 Radio przestało grać
@@ -3998,8 +3922,7 @@ Zatańczmy proszę tak jak gdyby umarł czas" Mówiła mi...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Nie umieraj dżdżownico}}
-\addcontentsline{toc}{subsection}{Poland Trip - Nie umieraj dżdżownico}
+\piosenka{Poland Trip - Nie umieraj dżdżownico}{Nie umieraj dżdżownico}
 \begin{verbatim}
 Leci bocian ponad lasem
 Wymachuje swym... ogonem
@@ -4043,8 +3966,7 @@ Bo to strefa atomowa
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Otwieram wino z moją dziewczyną}}
-\addcontentsline{toc}{subsection}{Sidney Polak - Otwieram wino z moją dziewczyną}
+\piosenka{Sidney Polak - Otwieram wino z moją dziewczyną}{Otwieram wino z moją dziewczyną}
 \begin{verbatim}
 Popatrz jak wszystko szybko się zmienia,
 coś jest, a później tego nie ma.
@@ -4130,8 +4052,7 @@ Nigdy nie przeminął, nigdy nie przeminął.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Pazdan boy}}
-\addcontentsline{toc}{subsection}{Nieznany kibic - Pazdan boy}
+\piosenka{Nieznany kibic - Pazdan boy}{Pazdan boy}
 \begin{verbatim}
 1.Szczęsny się połamał,
 Fabian zero z tyłu.
@@ -4182,8 +4103,7 @@ Bum tarara rara euro nadal trwa... (2x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Pokemon}}
-\addcontentsline{toc}{subsection}{Pokemon - Pokemon}
+\piosenka{Pokemon - Pokemon}{Pokemon}
 \begin{verbatim}
 Najlepszym być naprawdę chcę
 Jak nigdy dotąd nikt
@@ -4225,8 +4145,7 @@ Pokemon czy już wszystkie masz? (2x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Rapapara}}
-\addcontentsline{toc}{subsection}{Łydka Grubasa - Rapapara}
+\piosenka{Łydka Grubasa - Rapapara}{Rapapara}
 \begin{verbatim}
 On był samotny, jej było źle, gdzieś w Internecie poznali się
 On się zakochał ze samych zdjęć, bo tam rusałka, dziewczę na pięć
@@ -4262,8 +4181,7 @@ Rapapara, rapapara, zasługuje na browara!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Rota}}
-\addcontentsline{toc}{subsection}{Hymn - Rota}
+\piosenka{Hymn - Rota}{Rota}
 \begin{verbatim}
 Nie rzucim ziemi, skąd nasz ród,
 Nie damy pogrześć mowy,
@@ -4303,8 +4221,7 @@ Tak nam dopomóż Bóg!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Róża i bez – jak rozpętałem II wojnę światową}}
-\addcontentsline{toc}{subsection}{Jak rozpętałem II wojnę światową - Róża i bez}
+\piosenka{Jak rozpętałem II wojnę światową - Róża i bez}{Róża i bez – jak rozpętałem II wojnę światową}
 \begin{verbatim}
 To nic, że długi jest marsz,
 Słońce osuszy twarz,
@@ -4351,8 +4268,7 @@ Oto bracie wędrówki kres.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Stokrotka}}
-\addcontentsline{toc}{subsection}{Harcerz - Stokrotka}
+\piosenka{Harcerz - Stokrotka}{Stokrotka}
 \begin{verbatim}
 1. Gdzie strumyk płynie z wolna,
 Rozsiewa zioła maj,
@@ -4396,8 +4312,7 @@ ha, ha, ha, ha.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Szła dzieweczka do laseczka}}
-\addcontentsline{toc}{subsection}{Harcerz - Szła dzieweczka do laseczka}
+\piosenka{Harcerz - Szła dzieweczka do laseczka}{Szła dzieweczka do laseczka}
 \begin{verbatim}
 Szła dzieweczka do laseczka
 Do zielonego, do zielonego, do zielonego.
@@ -4433,8 +4348,7 @@ Tam były chłopoki łohohoho
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Tak, tak, to ja}}
-\addcontentsline{toc}{subsection}{Obywatel G.C. - Tak, tak, to ja}
+\piosenka{Obywatel G.C. - Tak, tak, to ja}{Tak, tak, to ja}
 \begin{verbatim}
 W końcu powiem ci co myślę,
 Tak prosto w twarz
@@ -4508,8 +4422,7 @@ Tak tak tak tak tak taaaaaak
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{To my Polacy}}
-\addcontentsline{toc}{subsection}{52 Dębiec - To my Polacy}
+\piosenka{52 Dębiec - To my Polacy}{To my Polacy}
 \begin{verbatim}
 Głos kraju mataczy - to my Polacy
 Głos kraju bez pracy - to my Polacy
@@ -4611,8 +4524,7 @@ Głos kraju mataczy - to my Polacy...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Wyginam śmiało ciało}}
-\addcontentsline{toc}{subsection}{Król Julian - Wyginam śmiało ciało}
+\piosenka{Król Julian - Wyginam śmiało ciało}{Wyginam śmiało ciało}
 \begin{verbatim}
 Wyginam śmiało ciało
 Wyginam śmiało ciało
@@ -4705,8 +4617,7 @@ Trzy,dwa,raz....
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Zabiorę Cię}}
-\addcontentsline{toc}{subsection}{Kancelaria - Zabiorę Cię właśnie tam}
+\piosenka{Kancelaria - Zabiorę Cię właśnie tam}{Zabiorę Cię}
 \begin{verbatim}
 Zabiorę Cię...właśnie tam...
 Gdzie jutra słodki smak
@@ -4757,8 +4668,7 @@ Gdzie szczęściu nic nie grozi
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Zanim pójdę}}
-\addcontentsline{toc}{subsection}{Happysad - Zanim pójdę}
+\piosenka{Happysad - Zanim pójdę}{Zanim pójdę}
 \begin{verbatim}
 Ile jestem ci winien?
 Ile policzyłaś mi za swą przyjaźń?
@@ -4810,8 +4720,7 @@ Miłość to nie pluszowy miś ani kwiaty...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Wolnośc i swoboda}}
-\addcontentsline{toc}{subsection}{Kamil - Wolnośc i swoboda}
+\piosenka{Kamil - Wolnośc i swoboda}{Wolnośc i swoboda}
 \begin{verbatim}
 Miała matka syna, syna jedynego.
 Chciała go wychować na pana wielkiego.
@@ -4860,8 +4769,7 @@ Niech żyje zabawa i dziewczyna młoda!
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Bardzo mała żaba}}
-\addcontentsline{toc}{subsection}{Mako - Bardzo mała żaba}
+\piosenka{Mako - Bardzo mała żaba}{Bardzo mała żaba}
 \begin{verbatim}
 Przychodzę do domu,
 A tam czeka na mnie
@@ -4910,8 +4818,7 @@ WOO-WOO-WOO-WOO-OO-OOH
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ajrisz}}
-\addcontentsline{toc}{subsection}{T. Love - Arjisz}
+\piosenka{T. Love - Arjisz}{Ajrisz}
 \begin{verbatim}
 Zabieram Cię do baru
 Będzie 8:0 dla mnie
@@ -4976,8 +4883,7 @@ Prawdziwa moja miłość nazywa się Ajrisz, nazywa się Ajrisz, nazywa się Ajr
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Nie, nie, nie}}
-\addcontentsline{toc}{subsection}{T. Love - Nie, nie, nie}
+\piosenka{T. Love - Nie, nie, nie}{Nie, nie, nie}
 \begin{verbatim}
 Połóż pistolet na stół
 I uprzedzenia wyrzuć w kąt
@@ -5027,8 +4933,7 @@ Nienawidzisz mnie
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Żule mi}}
-\addcontentsline{toc}{subsection}{Chwytak - Żule mi}
+\piosenka{Chwytak - Żule mi}{Żule mi}
 \begin{verbatim}
 Pasłech se gąskę.
 Na stole miałeche zakąskę.
@@ -5074,8 +4979,7 @@ Albo wam zaraz podpalę to Volvo, Volvo, Volvo, Vol...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Tyle słońca w całym mieście}}
-\addcontentsline{toc}{subsection}{Anna Jantar - Tyle słońca w całym mieście}
+\piosenka{Anna Jantar - Tyle słońca w całym mieście}{Tyle słońca w całym mieście}
 \begin{verbatim}
 Dzień - wspomnienie lata
 Dzień - słoneczne ćmy (a-a)
@@ -5126,8 +5030,7 @@ Dzień (dzień) - wspomnienie lata (lata) (4x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ostatnia nocka}}
-\addcontentsline{toc}{subsection}{Maleńczuk - Ostatnia nocka}
+\piosenka{Maleńczuk - Ostatnia nocka}{Ostatnia nocka}
 \begin{verbatim}
 Boli mnie głowa i nie mogę spać,
 chociaż dokoła wszyscy już posnęli,
@@ -5177,8 +5080,7 @@ wierzę jej czy nie wierzę.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Hakuna Matata}}
-\addcontentsline{toc}{subsection}{Disney - Hakuna Matata}
+\piosenka{Disney - Hakuna Matata}{Hakuna Matata}
 \begin{verbatim}
 Hakuna matata, jak cudownie to brzmi.
 Hakuna matata, to nie byle bzik!
@@ -5210,8 +5112,7 @@ Hakuna matata (10x)
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Mury}}
-\addcontentsline{toc}{subsection}{Jacek Kaczmarski - Mury}
+\piosenka{Jacek Kaczmarski - Mury}{Mury}
 \begin{verbatim}
 On natchniony i młody był, ich nie policzyłby nikt.
 On im dodawał pieśnią sił, śpiewał, że blisko już świt.
@@ -5263,8 +5164,7 @@ A mury rosną, rosną, rosną;
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Wilcza zamieć}}
-\addcontentsline{toc}{subsection}{Priscilla - Wilcza zamieć}
+\piosenka{Priscilla - Wilcza zamieć}{Wilcza zamieć}
 \begin{verbatim}
 Na szlak moich blizn poprowadź palec,
 By nasze drogi spleść gwiazdom na przekór.
@@ -5298,8 +5198,7 @@ Fiołkowe oczy mokre od łez.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Szanta dla panien i mężatek}}
-\addcontentsline{toc}{subsection}{Wojtek Szumański - Szanta dla panien i mężatek}
+\piosenka{Wojtek Szumański - Szanta dla panien i mężatek}{Szanta dla panien i mężatek}
 \begin{verbatim}
 Hej hej heja ho, postrach panien i mężatek,
 Mała, do twojego portu zaraz wpłynie mój statek.
@@ -5349,8 +5248,7 @@ Hej hej heja ho, postrach panien i mężatek...
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{You Give Love a Bad Name}}
-\addcontentsline{toc}{subsection}{Bon Jovi - You Give Love a Bad Name}
+\piosenka{Bon Jovi - You Give Love a Bad Name}{You Give Love a Bad Name}
 \begin{verbatim}
 Shot through the heart and you're to blame
 Darling, you give love a bad name
@@ -5402,8 +5300,7 @@ You give love
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Gdybym miał gitarę}}
-\addcontentsline{toc}{subsection}{Harcerz - Gdybym miał gitarę}
+\piosenka{Harcerz - Gdybym miał gitarę}{Gdybym miał gitarę}
 \begin{verbatim}
 Gdybym miał gitarę
 To bym na niej grał
@@ -5437,8 +5334,7 @@ Serce, duszę bym dał
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Na szczycie góry}}
-\addcontentsline{toc}{subsection}{Grubson - Na szczycie góry}
+\piosenka{Grubson - Na szczycie góry}{Na szczycie góry}
 \begin{verbatim}
 Ijeeaj!
 Yo!Yo!Yo!Yo! Boy!
@@ -5526,8 +5422,7 @@ wiem to na pewno (Gogo).
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Ona jest ze snu}}
-\addcontentsline{toc}{subsection}{Artur Gadowski - Ona jest ze snu}
+\piosenka{Artur Gadowski - Ona jest ze snu}{Ona jest ze snu}
 \begin{verbatim}
 Ref.:
 Ona jest ze snu, a ubrana w codzienność.
@@ -5565,8 +5460,7 @@ Dla mnie zrzuca ją, kiedy robi się ciemno.
 \end{verbatim}
 \clearpage
 
-\subsection*{\myformat{Hera koka hasz LSD}}
-\addcontentsline{toc}{subsection}{Jaracz feat. Szczypior - Hera koka hasz LSD}
+\piosenka{Jaracz feat. Szczypior - Hera koka hasz LSD}{Hera koka hasz LSD}
 \begin{verbatim}
 Jimmy bardzo nieśmiałym chłopaczkiem był,
 Który grzecznie do szkoły iść chciał,
@@ -5610,6 +5504,5 @@ Też bym chciał złoty strzał!
 Au...
 \end{verbatim}
 \clearpage
-
 
 \end{document}
