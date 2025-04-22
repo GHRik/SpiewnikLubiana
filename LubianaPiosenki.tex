@@ -40,15 +40,20 @@
   \subsubsection*{#2}%
 }
 
-\begin{flushright}
-\textit{Wersja z dnia: \LastUpdateDate}
-\end{flushright}
+\thispagestyle{empty}
+\newgeometry{
+  left=0cm,
+  right=0cm,
+  top=0cm,
+  bottom=0cm,
+  bindingoffset=0cm,
+  twoside=false
+}
 
-\begin{center}
-\vspace*{\stretch{1}}
-{\fontsize{60}{0} \selectfont Piosenki\\ Łubiana}
-\vspace*{\stretch{1}}
-\end{center}
+\includegraphics[width=\paperwidth,height=\paperheight]{titlepage.png}
+
+\restoregeometry
+\newpage
 
 \clearpage
 \begin{center}
@@ -56,6 +61,9 @@
 {\fontsize{40}{0} \selectfont Wydanie II}\\
 \vspace{0.5cm} 
 {\fontsize{20}{0} \selectfont Autorzy: Adam Ziołecki, Damian Panasiuk}
+\begin{flushright}
+\textit{Wersja z dnia: \LastUpdateDate}
+\end{flushright}
 
 \clearpage
 \end{center}
